@@ -32,6 +32,23 @@
   background-color: white;
 }
 
+.shadow-red {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #dd2020 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+  right: -100px!important;
+  bottom: 0px!important;
+}
+.shadow-blue {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #68c5e8 0%,
+    rgba(217, 217, 217, 0) 100%
+  );
+}
+
 /* HTML Tags */
 
 button {
@@ -60,7 +77,7 @@ button {
     #f1df0a 548.72deg
   );
   height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -70,8 +87,7 @@ button {
 .Nav {
   max-width: var(--max-Width);
   width: 100%;
-  /* min-width: 100%; */
-  height: 15vh;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,10 +138,10 @@ button {
   font-size: 105px;
   line-height: 98px;
   color: white;
-  width: 551px;
+  max-width: 551px;
 }
 .hero-p {
-  width: 70%;
+  max-width: 70%;
   font-family: "Titillium Web";
   font-weight: 400;
   font-size: 27px;
@@ -157,7 +173,6 @@ button {
 .swipper-slide {
   display: flex;
   flex-direction: row;
-  /* width: 2000px; */
   border-right: 1px solid black;
   text-align: center;
   align-items: center;
@@ -177,7 +192,6 @@ button {
   align-items: center;
 }
 .b-club-content {
-  background-color: #0086b7;
   display: flex;
   flex-direction: column;
   max-width: var(--max-Width);
@@ -203,7 +217,7 @@ button {
   line-height: 96px;
   text-align: center;
   color: #525252;
-  width: 990px;
+  max-width: 990px;
   margin-bottom: 30px;
 }
 
@@ -214,7 +228,7 @@ button {
   font-size: 38px;
   line-height: 58px;
   text-align: center;
-  width: 754px;
+  max-width: 754px;
   color: #000000;
 }
 
@@ -241,13 +255,7 @@ button {
   /* gap: 30px; */
 }
 
-.swipper-box {
-  /* width: 345px; */
-  height: 223px;
-  background-color: #0086b7;
-}
-.s-box-img{
-
+.s-box-img {
 }
 /*  Swipper Carousel Section Ends */
 
@@ -270,13 +278,24 @@ button {
 }
 
 .carousel-left {
-  /* background-color: #0086b7; */
+  position: relative;
+  z-index: 2;
 }
 .carousel-right {
   /* background-color: #525252; */
   height: 703px;
 }
-
+.shadow-wrapper {
+  /* background-color: #0086b7; */
+}
+.shadow {
+  position: absolute;
+  z-index: -1;
+  right: -100px;
+  bottom: -100px;
+  height: 400px;
+  width: 400px;
+}
 .carousel-h {
   margin-top: 50px;
   font-family: "Optima";
@@ -332,14 +351,16 @@ button {
   max-height: auto;
   display: flex;
   justify-content: space-around;
+  gap: 65px;
   align-items: center;
 }
-.streaming-abs{
+.streaming-abs {
   position: absolute;
+  top: 35px;
 }
 
 .st-bold-txt {
-  width: 373px;
+  max-width: 373px;
   font-family: "Optima";
   font-style: normal;
   font-weight: 400;
@@ -349,7 +370,7 @@ button {
 }
 
 .st-sub-txt {
-  width: 447px;
+  max-width: 447px;
   font-family: "Titillium Web";
   font-style: normal;
   font-weight: 400;
@@ -425,6 +446,22 @@ button {
     #dd2020 429.97deg
   );
   border-radius: 50px 0px 204.5px;
+  padding: 33px;
+  position: relative;
+}
+.grid-1-txt {
+  max-width: 291px;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 44px;
+  color: #ffffff;
+}
+.grid-1-img {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
 }
 .grid-2 {
   grid-column: 2 / span 2;
@@ -438,7 +475,23 @@ button {
     rgba(55, 55, 55, 0.304881) 268.04deg,
     #dd2020 360deg
   );
-  border-radius: 155.5px 0px;
+  border-radius: 0px 155.5px;
+  position: relative;
+  padding: 35px;
+}
+.grid-2-txt {
+  max-width: 291px;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 44px;
+  color: #ffffff;
+}
+.grid-2-img {
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
 }
 .grid-3 {
   grid-column: 2 / span 1;
@@ -450,6 +503,7 @@ button {
     #0e65e8 283.35deg,
     #17c1ff 360deg
   );
+  padding: 33px;
   border-radius: 0px 0px 0px 50px;
 }
 .grid-4 {
@@ -461,7 +515,22 @@ button {
     #ffd31c 0deg,
     #1aa5d8 360deg
   );
+  padding: 33px;
   border-radius: 50px 0px 159.5px;
+  position: relative;
+}
+.grid-4-txt {
+  max-width: 206px;
+  font-family: "Titillium Web";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 44px;
+  color: #ffffff;
+}
+.grid-4-img {
+  position: absolute;
+  bottom: 25px;
 }
 /* Features Section Ends  */
 
@@ -487,6 +556,10 @@ button {
   height: 100%;
   gap: 94px;
   background-color: white;
+}
+.join-left {
+  position: relative;
+  z-index: 2;
 }
 .join-right {
   height: 100%;
@@ -625,11 +698,11 @@ button {
   :root {
     --max-Width: 1312px;
   }
-  .hero-left{
+  .hero-left {
     /* justify-content: start; */
   }
 }
-@media (max-width: 1312px) {
+@media (max-width: 1412px) {
   :root {
     --max-Width: 1012px;
   }
